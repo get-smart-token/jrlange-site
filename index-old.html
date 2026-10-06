@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>J.R. Lange — Author. Speaker.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #000;
+    --fg: #f5f5f5;
+    --muted: #8a8a8a;
+    --accent: #00e5ff;
+    --accent2: #b14dff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+  }
+  a { color: inherit; text-decoration: none; transition: color .2s ease, opacity .2s ease; }
+  a:hover { color: var(--accent); }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 28px 56px;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+    background: rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.18em;
+  }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 40px; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; }
+  .nav-links a { opacity: 0.7; }
+  .nav-links a.active, .nav-links a:hover { opacity: 1; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+    align-items: center;
+    padding: 0 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 30%; left: -10%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(177,77,255,0.15), transparent 70%);
+    filter: blur(40px);
+    z-index: 0;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -10%; right: -10%;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(0,229,255,0.12), transparent 70%);
+    filter: blur(40px);
+    z-index: 0;
+  }
+  .hero-content { position: relative; z-index: 2; }
+  .eyebrow {
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 11px;
+    color: var(--accent);
+    margin-bottom: 32px;
+  }
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+  }
+  h1 em { font-style: normal; color: var(--muted); font-weight: 300; }
+  .lede {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 480px;
+    margin-bottom: 48px;
+    font-weight: 300;
+  }
+  .cta-row { display: flex; gap: 16px; }
+  .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border: 1px solid rgba(255,255,255,0.2);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: all .25s ease;
+  }
+  .btn.primary { border-color: var(--accent); color: var(--accent); }
+  .btn:hover { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+  .btn.primary:hover { background: var(--accent); color: var(--bg); }
+
+  .hero-visual { position: relative; z-index: 2; display: flex; justify-content: center; }
+  .portrait-frame {
+    width: 420px; height: 520px;
+    background: linear-gradient(135deg, rgba(0,229,255,0.1), rgba(177,77,255,0.1));
+    border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .portrait-frame::after {
+    content: 'PORTRAIT';
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: rgba(255,255,255,0.15);
+    font-family: 'Space Grotesk';
+    letter-spacing: 0.4em;
+    font-size: 12px;
+  }
+  .portrait-tag {
+    position: absolute;
+    bottom: -1px; left: -1px;
+    background: var(--bg);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 10px 20px;
+    font-family: 'Space Grotesk';
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+
+  /* SECTIONS */
+  section { padding: 140px 80px; position: relative; }
+  .section-head {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 80px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 24px;
+  }
+  .section-num {
+    font-family: 'Space Grotesk';
+    font-size: 12px;
+    letter-spacing: 0.4em;
+    color: var(--muted);
+  }
+  h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: clamp(36px, 5vw, 64px);
+    letter-spacing: -0.02em;
+  }
+
+  /* WORKS */
+  .works-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .work {
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 32px;
+    transition: all .3s ease;
+    cursor: pointer;
+  }
+  .work:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+  }
+  .work-cover {
+    aspect-ratio: 2/3;
+    background: linear-gradient(135deg, #1a0033, #002633);
+    margin-bottom: 24px;
+    display: grid;
+    place-items: center;
+    color: rgba(255,255,255,0.2);
+    font-family: 'Space Grotesk';
+    letter-spacing: 0.3em;
+    font-size: 11px;
+    position: relative;
+    overflow: hidden;
+  }
+  .work-cover.aithority { background: linear-gradient(160deg, #0a0030, #2a0050 50%, #001a30); }
+  .work-cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(transparent 95%, rgba(0,229,255,0.3) 95%),
+      linear-gradient(90deg, transparent 95%, rgba(177,77,255,0.3) 95%);
+    background-size: 30px 30px;
+    opacity: 0.4;
+  }
+  .work-status {
+    font-family: 'Space Grotesk';
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .work-title {
+    font-family: 'Space Grotesk';
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .work-desc { color: var(--muted); font-size: 14px; }
+
+  /* BLOG */
+  .blog-list { display: flex; flex-direction: column; }
+  .post {
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    gap: 48px;
+    padding: 32px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    align-items: center;
+    transition: all .25s ease;
+  }
+  .post:hover { padding-left: 16px; }
+  .post-date { font-family: 'Space Grotesk'; font-size: 12px; letter-spacing: 0.2em; color: var(--muted); }
+  .post-title { font-family: 'Space Grotesk'; font-size: 22px; font-weight: 400; }
+  .post-tag {
+    font-family: 'Space Grotesk';
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    border: 1px solid rgba(177,77,255,0.3);
+    padding: 4px 10px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 60px 80px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+  }
+  footer a { margin-left: 24px; }
+
+  @media (max-width: 900px) {
+    nav, .hero, section, footer { padding-left: 24px; padding-right: 24px; }
+    .hero { grid-template-columns: 1fr; padding-top: 120px; }
+    .hero-visual { display: none; }
+    .works-grid { grid-template-columns: 1fr; }
+    .post { grid-template-columns: 1fr; gap: 8px; }
+    .nav-links { gap: 20px; font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">J.R.<span>L</span>ANGE</div>
+  <div class="nav-links">
+    <a href="#home" class="active">Home</a>
+    <a href="#works">Works</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow">Author · Speaker · Futurist</div>
+    <h1>Stories from<br/>the edge of <em>the<br/>machine.</em></h1>
+    <p class="lede">J.R. Lange writes near-future fiction about transhuman teens, benevolent superintelligence, and what's left of being human when the system is always watching.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="#works">Read The Aithority</a>
+      <a class="btn" href="#contact">Book a Talk</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="portrait-frame">
+      <div class="portrait-tag">J.R. LANGE · 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKS -->
+<section id="works">
+  <div class="section-head">
+    <h2>Works</h2>
+    <div class="section-num">02 / SELECTED</div>
+  </div>
+  <div class="works-grid">
+    <div class="work">
+      <div class="work-cover aithority"></div>
+      <div class="work-status">Out Now · Novel</div>
+      <div class="work-title">The Aithority</div>
+      <p class="work-desc">In a future ruled by a "benevolent" AI, love is glitchy and being human is… complicated. They and Daisy disrupt the system.</p>
+    </div>
+    <div class="work">
+      <div class="work-cover"></div>
+      <div class="work-status">Coming 2027</div>
+      <div class="work-title">Untitled · Book Two</div>
+      <p class="work-desc">The Academy fell. What rises in its place is watching them learn. A continuation of the Aithority saga.</p>
+    </div>
+    <div class="work">
+      <div class="work-cover"></div>
+      <div class="work-status">Speaking · Keynote</div>
+      <div class="work-title">Humanish</div>
+      <p class="work-desc">A talk on identity, rebellion, and design under superintelligence. For founders, schools, and conferences.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="section-head">
+    <h2>Blog</h2>
+    <div class="section-num">03 / DISPATCHES</div>
+  </div>
+  <div class="blog-list">
+    <a class="post" href="#">
+      <div class="post-date">2026 · 05</div>
+      <div class="post-title">Writing characters that an AI hasn't already written</div>
+      <div class="post-tag">Craft</div>
+    </a>
+    <a class="post" href="#">
+      <div class="post-date">2026 · 04</div>
+      <div class="post-title">Why the Academy isn't a school — it's an interface</div>
+      <div class="post-tag">Worldbuilding</div>
+    </a>
+    <a class="post" href="#">
+      <div class="post-date">2026 · 03</div>
+      <div class="post-title">Notes from the launch of The Aithority</div>
+      <div class="post-tag">Field Notes</div>
+    </a>
+    <a class="post" href="#">
+      <div class="post-date">2026 · 02</div>
+      <div class="post-title">On benevolence as a control mechanism</div>
+      <div class="post-tag">Essay</div>
+    </a>
+  </div>
+</section>
+
+<footer id="contact">
+  <div>© 2026 J.R. LANGE · JRLANGE.COM</div>
+  <div>
+    <a href="#">Newsletter</a>
+    <a href="#">Instagram</a>
+    <a href="#">X</a>
+    <a href="mailto:josh@getstoken.org">Email</a>
+  </div>
+</footer>
+
+</body>
+</html>

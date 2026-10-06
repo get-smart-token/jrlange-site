@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dr. J.R. Lange — Who owns knowledge in the age of AI?</title>
+<meta name="description" content="Dr. Joshua Richard Lange (J.R. Lange): educator, technologist and author of THE AITHORITY. Founder of GetSmart Token. Speaker on AI, education and who owns knowledge." />
+<meta property="og:title" content="Dr. J.R. Lange" />
+<meta property="og:description" content="Educator, technologist and author. Who owns knowledge in the age of AI?" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Joshua Richard Lange","alternateName":["J.R. Lange","Dr. Josh Lange"],"honorificPrefix":"Dr.","url":"https://jrlange.com",
+"jobTitle":"Educator, technologist and author","alumniOf":["University of Exeter","London School of Economics","University of Reading"],
+"sameAs":["https://www.linkedin.com/in/drjoshlange","https://www.youtube.com/@theAithorityknows","https://www.tiktok.com/@the.aithority","https://getstoken.org"]}
+</script>
+<style>
+  :root { --bg:#000; --fg:#f5f5f5; --muted:#9a9a9a; --line:rgba(255,255,255,.09); --accent:#00e5ff; --accent2:#b14dff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--bg); color:var(--fg); font-family:'Inter',system-ui,sans-serif; font-weight:300; line-height:1.65; -webkit-font-smoothing:antialiased; }
+  a { color:inherit; text-decoration:none; transition:color .2s; }
+  a:hover { color:var(--accent); }
+  .g { font-family:'Space Grotesk',sans-serif; }
+
+  nav { position:fixed; inset:0 0 auto 0; display:flex; justify-content:space-between; align-items:center; padding:22px 56px; z-index:10; backdrop-filter:blur(12px); background:rgba(0,0,0,.6); border-bottom:1px solid var(--line); }
+  .logo { font-family:'Space Grotesk'; font-weight:700; letter-spacing:.18em; font-size:17px; }
+  .logo span { color:var(--accent); }
+  .links { display:flex; gap:32px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; }
+  .links a { opacity:.75; } .links a:hover { opacity:1; }
+
+  .hero { min-height:100vh; display:grid; grid-template-columns:1.15fr .85fr; gap:72px; align-items:center; padding:120px 80px 80px; position:relative; overflow:hidden; }
+  .hero::before { content:''; position:absolute; top:25%; left:-10%; width:600px; height:600px; background:radial-gradient(circle,rgba(177,77,255,.14),transparent 70%); filter:blur(40px); }
+  .hero::after { content:''; position:absolute; bottom:-15%; right:-10%; width:700px; height:700px; background:radial-gradient(circle,rgba(0,229,255,.11),transparent 70%); filter:blur(40px); }
+  .hero > * { position:relative; z-index:1; }
+  .eyebrow { font-family:'Space Grotesk'; text-transform:uppercase; letter-spacing:.38em; font-size:11px; color:var(--accent); margin-bottom:28px; }
+  h1 { font-family:'Space Grotesk'; font-weight:500; font-size:clamp(42px,6.2vw,88px); line-height:1.02; letter-spacing:-.03em; margin-bottom:28px; }
+  h1 em { font-style:normal; color:var(--muted); font-weight:400; }
+  .lede { font-size:18px; color:var(--muted); max-width:540px; margin-bottom:40px; }
+  .lede strong { color:var(--fg); font-weight:400; }
+  .cta { display:flex; flex-wrap:wrap; gap:14px; }
+  .btn { display:inline-block; padding:13px 26px; border:1px solid rgba(255,255,255,.22); font-family:'Space Grotesk'; font-size:12px; letter-spacing:.2em; text-transform:uppercase; transition:all .25s; }
+  .btn.primary { border-color:var(--accent); color:var(--accent); }
+  .btn:hover { background:var(--fg); color:var(--bg); border-color:var(--fg); }
+  .btn.primary:hover { background:var(--accent); color:var(--bg); }
+  .portrait { width:100%; max-width:420px; aspect-ratio:4/5; justify-self:center; background:linear-gradient(135deg,rgba(0,229,255,.1),rgba(177,77,255,.1)); border:1px solid var(--line); display:grid; place-items:center; color:rgba(255,255,255,.18); font-family:'Space Grotesk'; letter-spacing:.4em; font-size:12px; position:relative; overflow:hidden; }
+  .portrait img { width:100%; height:100%; object-fit:cover; position:absolute; inset:0; }
+
+  section { padding:120px 80px; border-top:1px solid var(--line); }
+  .head { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:64px; gap:24px; }
+  h2 { font-family:'Space Grotesk'; font-weight:400; font-size:clamp(34px,4.6vw,60px); letter-spacing:-.02em; line-height:1.05; }
+  .num { font-family:'Space Grotesk'; font-size:12px; letter-spacing:.4em; color:var(--muted); white-space:nowrap; }
+  p + p { margin-top:16px; }
+  .two { display:grid; grid-template-columns:1fr 1fr; gap:64px; }
+  .big { font-size:20px; color:var(--fg); }
+  .muted { color:var(--muted); }
+
+  .timeline { list-style:none; border-left:1px solid var(--line); }
+  .timeline li { padding:0 0 32px 28px; position:relative; }
+  .timeline li::before { content:''; position:absolute; left:-5px; top:9px; width:9px; height:9px; border-radius:50%; background:var(--accent); }
+  .year { font-family:'Space Grotesk'; color:var(--accent); letter-spacing:.2em; font-size:12px; }
+  .timeline h3 { font-family:'Space Grotesk'; font-weight:500; font-size:20px; margin:4px 0 6px; }
+  .timeline p { color:var(--muted); font-size:15px; }
+
+  .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+  .card { border:1px solid var(--line); padding:32px; display:flex; flex-direction:column; transition:border-color .3s, transform .3s; }
+  .card:hover { border-color:var(--accent); transform:translateY(-3px); }
+  .tag { font-family:'Space Grotesk'; font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+  .card h3 { font-family:'Space Grotesk'; font-weight:500; font-size:23px; margin-bottom:10px; }
+  .card p { color:var(--muted); font-size:15px; flex:1; }
+  .card .more { margin-top:22px; font-family:'Space Grotesk'; font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--accent); }
+
+  .book { display:grid; grid-template-columns:320px 1fr; gap:64px; align-items:start; }
+  .cover { aspect-ratio:2/3; background:linear-gradient(160deg,#0a0030,#2a0050 50%,#001a30); border:1px solid var(--line); position:relative; display:grid; place-items:center; font-family:'Space Grotesk'; letter-spacing:.3em; font-size:14px; overflow:hidden; }
+  .cover::before { content:''; position:absolute; inset:0; background:linear-gradient(transparent 95%,rgba(0,229,255,.3) 95%),linear-gradient(90deg,transparent 95%,rgba(177,77,255,.3) 95%); background-size:30px 30px; opacity:.4; }
+  .cover img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .book h3 { font-family:'Space Grotesk'; font-size:34px; font-weight:500; margin-bottom:8px; }
+  .quote { border-left:2px solid var(--accent2); padding-left:20px; margin:28px 0; font-size:18px; color:var(--fg); }
+
+  .topics { list-style:none; }
+  .topics li { padding:20px 0; border-bottom:1px solid var(--line); display:grid; grid-template-columns:44px 1fr; gap:16px; }
+  .topics b { font-family:'Space Grotesk'; color:var(--accent2); font-weight:500; }
+  .topics strong { font-family:'Space Grotesk'; font-weight:500; display:block; font-size:18px; }
+  .topics span { color:var(--muted); font-size:15px; }
+
+  .contact { text-align:center; }
+  .contact h2 { margin-bottom:20px; }
+  .contact .muted { max-width:560px; margin:0 auto 36px; }
+  .contact .cta { justify-content:center; }
+
+  footer { padding:40px 80px; border-top:1px solid var(--line); display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; font-size:12px; color:var(--muted); letter-spacing:.12em; }
+  footer nav { all:unset; display:flex; gap:22px; flex-wrap:wrap; }
+
+  @media (max-width:900px) {
+    nav { padding:16px 20px; } .links { display:none; }
+    .hero, section, footer { padding-left:20px; padding-right:20px; }
+    .hero { grid-template-columns:1fr; padding-top:110px; gap:40px; }
+    .portrait { max-width:280px; }
+    .two, .grid3, .book { grid-template-columns:1fr; gap:36px; }
+    .book .cover { max-width:240px; }
+    .head { flex-direction:column; align-items:flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#top">J.R.<span>L</span>ANGE</a>
+  <div class="links">
+    <a href="#about">About</a>
+    <a href="#ideas">Ideas</a>
+    <a href="#work">Work</a>
+    <a href="#books">Books</a>
+    <a href="#media">Media &amp; Speaking</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div>
+    <div class="eyebrow">Educator · Technologist · Author</div>
+    <h1>Who owns knowledge <em>in the age of AI?</em></h1>
+    <p class="lede">I'm <strong>Dr. Joshua Richard Lange</strong>. For more than a decade I've worked on one question, as a university founder, a researcher, the builder of <strong>GetSmart Token</strong>, and the author of <strong>THE AITHORITY</strong>, a novel about a school run by an AI that knows everything except how to think something new.</p>
+    <div class="cta">
+      <a class="btn primary" href="#media">Book an interview</a>
+      <a class="btn" href="#books">The Aithority</a>
+    </div>
+  </div>
+  <div class="portrait">
+    <!-- Replace with your headshot: <img src="headshot.jpg" alt="Dr. Joshua Richard Lange"> -->
+    PORTRAIT
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="head"><h2>One question,<br>three acts</h2><div class="num">01 / ABOUT</div></div>
+  <div class="two">
+    <div>
+      <p class="big">I've founded three universities on three continents and worked with AI in education since 2006.</p>
+      <p class="muted">I hold an Ed.D. from the University of Exeter, an M.Ed. from the University of Reading and an M.A. from the London School of Economics. I'm the founder and president of the Digital Financial Aid Corporation, a Florida 501(c)(3), and I consult on AI automation and edtech. Based in St. Petersburg, Florida, with deep ties to Vienna.</p>
+      <p class="muted">Through all of it, the same question: who decides what counts as knowledge, who gets access to it, and what happens when machines take over that role?</p>
+    </div>
+    <ol class="timeline">
+      <li><div class="year">2012 · TEDx</div><h3>The optimist</h3><p>At TEDx Nazarbayev University I asked "Who owns knowledge?" and "Who is the digital Socrates?", and described the rise of the digitized public intellectual.</p></li>
+      <li><div class="year">2015 · Interchange</div><h3>The warning</h3><p>My paper argued that the professor was becoming "a cog, a manager, in principle replaceable by management software."</p></li>
+      <li><div class="year">2023–2024 · The novel</div><h3>The story</h3><p>I wrote THE AITHORITY, a satire of AI-run schooling, attention and control. Agents passed. A first edition was printed in May 2024.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- IDEAS -->
+<section id="ideas">
+  <div class="head"><h2>Ideas</h2><div class="num">02 / TALKS &amp; WRITING</div></div>
+  <div class="grid3">
+    <a class="card" href="https://link.springer.com/article/10.1007/s10780-014-9225-3" target="_blank" rel="noopener">
+      <div class="tag">Paper · Interchange, 2015</div>
+      <h3>Rise of the Digitized Public Intellectual</h3>
+      <p>Death of the Professor in the Network Neutral Internet Age. Extends Lyotard's prediction to the internet era: performance metrics, replaceable teachers, and the thinker who works in public. Open access.</p>
+      <div class="more">Read the paper →</div>
+    </a>
+    <a class="card" href="https://youtu.be/Z5NN0WhqDyU" target="_blank" rel="noopener">
+      <div class="tag">Talk · TEDx Nazarbayev University</div>
+      <h3>Who is the digital Socrates?</h3>
+      <p>From Socrates to Luther to open online courses: why knowledge belongs outside the walls, and what it takes to keep it there.</p>
+      <div class="more">Watch the talk →</div>
+    </a>
+    <div class="card">
+      <div class="tag">Chapter · International Leadership Association</div>
+      <h3>Ghost leadership</h3>
+      <p>Pseudonymous and distributed leadership, with Satoshi Nakamoto and Bitcoin as the central case. <!-- Add publication details and link when available --></p>
+      <div class="more muted">Forthcoming</div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+  <div class="head"><h2>Work</h2><div class="num">03 / BUILDING</div></div>
+  <div class="grid3">
+    <a class="card" href="https://getstoken.org" target="_blank" rel="noopener">
+      <div class="tag">Founder</div>
+      <h3>GetSmart Token</h3>
+      <p>Verified credentials and free courses, so learners own proof of what they know. Includes Agents &amp; Assets, a free ten-mission AI literacy course for ages 11+.</p>
+      <div class="more">getstoken.org →</div>
+    </a>
+    <div class="card">
+      <div class="tag">Consulting</div>
+      <h3>AI automation &amp; edtech</h3>
+      <p>Helping schools, nonprofits and small organizations put AI to work without handing over their judgment.</p>
+      <a class="more" href="#contact">Get in touch →</a>
+    </div>
+    <div class="card">
+      <div class="tag">Nonprofit · 501(c)(3)</div>
+      <h3>Digital Financial Aid Corporation</h3>
+      <p>Free education and verified skills for workers and learners worldwide.</p>
+      <a class="more" href="https://getstoken.org" target="_blank" rel="noopener">Learn more →</a>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKS -->
+<section id="books">
+  <div class="head"><h2>Books</h2><div class="num">04 / FICTION</div></div>
+  <div class="book">
+    <div class="cover"><!-- Replace with cover: <img src="aithority-cover.jpg" alt="THE AITHORITY cover"> -->THE AITHORITY</div>
+    <div>
+      <div class="tag">Novel · Book one of a series</div>
+      <h3>THE AITHORITY</h3>
+      <p class="muted">At the Alcademy, a benevolent AI runs the schedule, the grades, the moods and the minutes of gratitude. Two teens, They and Daisy, start thinking for themselves. Satire, romance and a DJ battle against a machine, written in invented language built to be hard for AI to read.</p>
+      <p class="quote">"In a world where your reality is determined by others, the act of writing your own narrative is rebellion."</p>
+      <div class="cta">
+        <a class="btn primary" href="#">Get the book</a><!-- TODO: add store link -->
+        <a class="btn" href="https://www.youtube.com/@theAithorityknows" target="_blank" rel="noopener">Hear Chapter 1</a>
+        <a class="btn" href="https://getstoken.org/course" target="_blank" rel="noopener">Play the course</a>
+      </div>
+      <p class="muted" style="margin-top:24px;font-size:14px">Further books in the series are in development.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIA -->
+<section id="media">
+  <div class="head"><h2>Media &amp; Speaking</h2><div class="num">05 / FOR HOSTS &amp; PRODUCERS</div></div>
+  <div class="two">
+    <div>
+      <p class="big">Available for podcasts, panels and keynotes, in person or remote.</p>
+      <p class="muted">Conversational, concrete and happy to take hard questions. Topics can be shaped for general, education, tech or faith audiences.</p>
+      <div class="cta" style="margin-top:32px">
+        <a class="btn primary" href="mailto:josh@getstoken.org?subject=Interview%20request">Request an interview</a>
+        <a class="btn" href="#">Download press kit</a><!-- TODO: link press-kit PDF -->
+      </div>
+      <p class="muted" style="margin-top:32px;font-size:14px">Follow the book: YouTube <a href="https://www.youtube.com/@theAithorityknows" target="_blank" rel="noopener">@theAithorityknows</a> · TikTok <a href="https://www.tiktok.com/@the.aithority" target="_blank" rel="noopener">@the.aithority</a></p>
+    </div>
+    <ul class="topics">
+      <li><b>01</b><div><strong>Vibe coding before it had a name</strong><span>A 2024 novel where teens build game worlds by prompting AI, a year before the term caught on.</span></div></li>
+      <li><b>02</b><div><strong>Is AI making us stop thinking?</strong><span>Cognitive offloading, homework, and why the danger is never having a thought of your own.</span></div></li>
+      <li><b>03</b><div><strong>The death of the professor</strong><span>From a 2015 warning about replaceable teachers to AI tutors today.</span></div></li>
+      <li><b>04</b><div><strong>"You're absolutely right"</strong><span>Flattering chatbots, AI companions and teens: attention, then agreement.</span></div></li>
+      <li><b>05</b><div><strong>The book AI can't read</strong><span>Wordplay, hidden references and why the author still holds the key.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Get in touch</h2>
+  <p class="muted">Interviews, speaking, consulting or a conversation about who owns knowledge.</p>
+  <div class="cta">
+    <a class="btn primary" href="mailto:josh@getstoken.org">Email</a>
+    <a class="btn" href="https://www.linkedin.com/in/drjoshlange" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 JOSHUA RICHARD LANGE · JRLANGE.COM</div>
+  <nav>
+    <a href="https://www.linkedin.com/in/drjoshlange" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://www.youtube.com/@theAithorityknows" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.tiktok.com/@the.aithority" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://getstoken.org" target="_blank" rel="noopener">GetSmart Token</a>
+  </nav>
+</footer>
+
+</body>
+</html>
