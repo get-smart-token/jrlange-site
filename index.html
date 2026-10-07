@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Dr. J.R. Lange — Who owns knowledge in the age of AI?</title>
-<meta name="description" content="Dr. Joshua Richard Lange (J.R. Lange): educator, technologist and author of THE AITHORITY. Founder of GetSmart Token. Speaker on AI, education and who owns knowledge." />
+<meta name="description" content="Dr. Joshua Richard Lange (J.R. Lange): educator, technologist and author of THE AITHORITY. Maker of Agents &amp; Assets: The Resistance. Speaker on AI, education and who owns knowledge." />
 <meta property="og:title" content="Dr. J.R. Lange" />
 <meta property="og:description" content="Educator, technologist and author. Who owns knowledge in the age of AI?" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,6 +71,15 @@
   .card p { color:var(--muted); font-size:15px; flex:1; }
   .card .more { margin-top:22px; font-family:'Space Grotesk'; font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--accent); }
 
+  .feature { display:grid; grid-template-columns:1.05fr .95fr; gap:52px; align-items:center; border:1px solid var(--line); padding:0; margin-bottom:28px; overflow:hidden; transition:border-color .3s; }
+  .feature:hover { border-color:var(--accent2); }
+  .feature-img { position:relative; aspect-ratio:16/9; overflow:hidden; background:#0a0014; }
+  .feature-img img { width:100%; height:100%; object-fit:cover; display:block; }
+  .feature-img::after { content:''; position:absolute; inset:0; background:linear-gradient(90deg,transparent 60%,rgba(0,0,0,.65)); }
+  .feature-body { padding:40px 48px 40px 0; }
+  .feature h3 { font-family:'Space Grotesk'; font-weight:500; font-size:30px; line-height:1.15; margin-bottom:12px; }
+  .feature p { color:var(--muted); font-size:15px; max-width:46ch; }
+
   .book { display:grid; grid-template-columns:320px 1fr; gap:64px; align-items:start; }
   .cover { aspect-ratio:2/3; background:linear-gradient(160deg,#0a0030,#2a0050 50%,#001a30); border:1px solid var(--line); position:relative; display:grid; place-items:center; font-family:'Space Grotesk'; letter-spacing:.3em; font-size:14px; overflow:hidden; }
   .cover::before { content:''; position:absolute; inset:0; background:linear-gradient(transparent 95%,rgba(0,229,255,.3) 95%),linear-gradient(90deg,transparent 95%,rgba(177,77,255,.3) 95%); background-size:30px 30px; opacity:.4; }
@@ -97,7 +106,11 @@
     .hero, section, footer { padding-left:20px; padding-right:20px; }
     .hero { grid-template-columns:1fr; padding-top:110px; gap:40px; }
     .portrait { max-width:280px; }
-    .two, .grid3, .book { grid-template-columns:1fr; gap:36px; }
+    .two, .grid3, .book, .feature { grid-template-columns:1fr; gap:0; }
+    .two, .grid3, .book { gap:36px; }
+    .feature-img::after { background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.7)); }
+    .feature-body { padding:28px 24px 32px; }
+    .feature h3 { font-size:25px; }
     .book .cover { max-width:240px; }
     .head { flex-direction:column; align-items:flex-start; }
   }
@@ -122,15 +135,14 @@
   <div>
     <div class="eyebrow">Educator · Technologist · Author</div>
     <h1>Who owns knowledge <em>in the age of AI?</em></h1>
-    <p class="lede">I'm <strong>Dr. Joshua Richard Lange</strong>. For more than a decade I've worked on one question, as a university founder, a researcher, the builder of <strong>GetSmart Token</strong>, and the author of <strong>THE AITHORITY</strong>, a novel about a school run by an AI that knows everything except how to think something new.</p>
+    <p class="lede">I'm <strong>Dr. Joshua Richard Lange</strong>. For more than a decade I've worked on one question, as a university founder, a researcher, the author of <strong>THE AITHORITY</strong>, and the maker of <strong>Agents &amp; Assets: The Resistance</strong>, an alternate reality game that teaches AI literacy by making you live it.</p>
     <div class="cta">
       <a class="btn primary" href="#media">Book an interview</a>
       <a class="btn" href="#books">The Aithority</a>
     </div>
   </div>
   <div class="portrait">
-    <!-- Replace with your headshot: <img src="headshot.jpg" alt="Dr. Joshua Richard Lange"> -->
-    PORTRAIT
+    <img src="img/headshot.jpg" alt="Dr. Joshua Richard Lange" />
   </div>
 </header>
 
@@ -179,13 +191,18 @@
 <!-- WORK -->
 <section id="work">
   <div class="head"><h2>Work</h2><div class="num">03 / BUILDING</div></div>
+
+  <a class="feature" href="https://getstoken.org/course" target="_blank" rel="noopener">
+    <div class="feature-img"><img src="img/citizens.jpg" alt="The CitiZens — characters from Agents &amp; Assets: The Resistance" /></div>
+    <div class="feature-body">
+      <div class="tag">Alternate Reality Game · Free · Ages 11+</div>
+      <h3>Agents &amp; Assets:<br>The Resistance</h3>
+      <p>A ten-mission ARG that teaches AI literacy by making you live it. Players join the CitiZens, work real tools against real problems, and earn verified credentials for what they actually learn.</p>
+      <div class="more">Play it →</div>
+    </div>
+  </a>
+
   <div class="grid3">
-    <a class="card" href="https://getstoken.org" target="_blank" rel="noopener">
-      <div class="tag">Founder</div>
-      <h3>GetSmart Token</h3>
-      <p>Verified credentials and free courses, so learners own proof of what they know. Includes Agents &amp; Assets, a free ten-mission AI literacy course for ages 11+.</p>
-      <div class="more">getstoken.org →</div>
-    </a>
     <div class="card">
       <div class="tag">Consulting</div>
       <h3>AI automation &amp; edtech</h3>
@@ -198,6 +215,12 @@
       <p>Free education and verified skills for workers and learners worldwide.</p>
       <a class="more" href="https://getstoken.org" target="_blank" rel="noopener">Learn more →</a>
     </div>
+    <a class="card" href="https://getstoken.org" target="_blank" rel="noopener">
+      <div class="tag">Founder</div>
+      <h3>GetSmart Token</h3>
+      <p>The platform the ARG runs on. Verified credentials and free courses, so learners own proof of what they know.</p>
+      <div class="more">getstoken.org →</div>
+    </a>
   </div>
 </section>
 
@@ -205,7 +228,7 @@
 <section id="books">
   <div class="head"><h2>Books</h2><div class="num">04 / FICTION</div></div>
   <div class="book">
-    <div class="cover"><!-- Replace with cover: <img src="aithority-cover.jpg" alt="THE AITHORITY cover"> -->THE AITHORITY</div>
+    <div class="cover"><img src="img/aithority-cover.jpg" alt="THE AITHORITY by J.R. Lange — cover" /></div>
     <div>
       <div class="tag">Novel · Book one of a series</div>
       <h3>THE AITHORITY</h3>
